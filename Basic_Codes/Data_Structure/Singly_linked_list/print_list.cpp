@@ -44,5 +44,9 @@ int main(){
     // cout<<head->next->next->next->next->val<<endl;// (*(*(*(*(*head).next).next).next).next)=50
     
     print_list(head);
+    
+    cout<<"Size of val: "<<sizeof(int)<<" bytes"<<endl;
+    cout<<"Size of Node: "<<sizeof(Node*)<<" bytes"<<endl;
+    cout<<"Total size: "<<sizeof(int)+sizeof(Node*)<<" bytes"<<endl;
     return 0;
 }
