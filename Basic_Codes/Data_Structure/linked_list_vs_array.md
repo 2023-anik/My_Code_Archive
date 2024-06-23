@@ -57,4 +57,3 @@ The linked list requires more memory due to:
 
 Therefore, for the same number of elements, a linked list generally consumes more memory compared to an array.
 
-*"This content was provided by ChatGPT....""""*
