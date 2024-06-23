@@ -8,13 +8,13 @@ using namespace std;
 //     Node* next;
 // };
 
-//using a constractor
+//using a constructor
 class Node{
     public:
     int val;
     Node* next;
 
-    /****constractor****/
+    /****constructor****/
     Node(int val){
         this->val=val;
         this->next=NULL;
@@ -33,7 +33,7 @@ int main(){
     // cout<<(*a.next).val<<endl;
 
     //Using constructor
-    Node a(10), b(20);//-->static nodes - a and b
+    Node a(10), b(20); //--> static nodes - a and b are objects of the Node constructor
     a.next=&b;
     b.next=NULL;
     cout<<a.val<<endl;
