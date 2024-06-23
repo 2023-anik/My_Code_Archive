@@ -23,7 +23,7 @@ class Node{
 };
 
 int main(){
-    // Node a, b;
+    // Node a, b;//-->static nodes - a and b
     // a.val=10;
     // b.val=20;
     // a.next=&b;
@@ -33,7 +33,7 @@ int main(){
     // cout<<(*a.next).val<<endl;
 
     //Using constructor
-    Node a(10), b(20);
+    Node a(10), b(20);//-->static nodes - a and b
     a.next=&b;
     b.next=NULL;
     cout<<a.val<<endl;
