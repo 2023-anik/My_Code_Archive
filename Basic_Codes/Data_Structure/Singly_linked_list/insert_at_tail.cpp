@@ -13,7 +13,6 @@ class Node{
         this->val=val;
         this->next=NULL;
     }
-    /*******************/
 };
 
 void insert_at_tail(Node* &head, int &x){
