@@ -27,7 +27,7 @@ void insert_at_tail(Node* &head, int &x){
     while(temp->next!=NULL)
         temp=temp->next;
     temp->next=newNode;
-    newNode->next=NULL;
+    // newNode->next=NULL; -->not necessary cause newNode already point to nulptr
     cout<<"Successfully inserted:)"<<endl<<endl;
 }
 
@@ -68,8 +68,10 @@ int main(){
                 cout<<endl<<endl;
                 break;
             }
+            default:
+                cout<<"Invalid command. Try again!"<<endl;
         }
     }while(cmd!=0);
-    
+
     return 0;
 }
