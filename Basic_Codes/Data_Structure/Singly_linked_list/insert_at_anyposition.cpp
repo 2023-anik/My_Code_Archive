@@ -18,6 +18,12 @@ class Node{
 //for inserting at anyposition
 void insert_at_anyposition(Node* &head, int &value, int &posi){
     Node* newNode=new Node(value);
+    if(posi==1){
+        newNode->next=head;
+        head=newNode;
+        cout<<"Successfully inserted"<<endl<<endl;
+        return;
+    }
     Node* temp=head;
     for(int i=1; i<posi-1; ++i)
         temp=temp->next;
