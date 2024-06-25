@@ -156,7 +156,7 @@ int main(){
         cout<<"[7] See the list size"<<endl;
         cout<<"[8] See the list"<<endl;
         cout<<"[0] Exit"<<endl;
-        cout<<"Enter any from 0 to 6 ";
+        cout<<"Enter any from 0 to 8: ";
         cin>>cmd;
         cout<<endl;
         switch(cmd){
