@@ -28,10 +28,10 @@ void Insert_at_tail(Node* &head, int &value){
 
 //to delete from any possition
 void Delete_form_any_position(Node* &head, int &posi){
-    if(equal_to<int>()(posi, 1)){
-        Node* deleteHead=head;
-        head=head->next;
-        delete deleteHead;
+    if(equal_to<int>()(posi, 1)){    //********************************
+        Node* deleteHead=head;       //Delete from possition 1 means, *
+        head=head->next;             //Delete from head.              *
+        delete deleteHead;           //********************************
         cout<<"Successfully have deleted from "<<posi<<endl<<endl;
         return;
     }
