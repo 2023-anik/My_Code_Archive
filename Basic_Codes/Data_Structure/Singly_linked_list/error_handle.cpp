@@ -132,6 +132,10 @@ int list_size(Node* &head){
 
 //to print to list
 void print_the_list(Node* &head){
+    if(head==nullptr){
+        cout<<"Empty list"<<endl<<endl;
+        return;
+    }
     cout<<"Elements of the list: ";
     Node* temp=head;
     while(temp not_eq nullptr){
@@ -174,6 +178,7 @@ int main(){
                 int posi, x;
                 cout<<"Enter position: ";cin>>posi;
                 cout<<"Enter value: "; cin>>x;
+                cout<<endl;
                 if(posi==1) insert_at_head(head, x);
                 else insert_at_any_position(head, posi, x);
                 break;
@@ -189,11 +194,12 @@ int main(){
             case 6:{
                 int posi;
                 cout<<"Enter position: "; cin>>posi;
+                cout<<endl;
                 delete_from_any_position(head, posi);
                 break;
             }
             case 7:{
-                cout<<list_size(head)<<endl<<endl;
+                cout<<"List size: "<<list_size(head)<<endl<<endl;
                 break;
             }
             case 8:{
@@ -204,7 +210,7 @@ int main(){
                 cout<<"Successfully have exited"<<endl;
                 return 0;
             }
-            default:cout<<"Invalid enter! Try again."<<endl<<endl;
+            default:cout<<"Invalid entry! Try again."<<endl<<endl;
         }
     }
     return 0;
