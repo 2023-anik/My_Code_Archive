@@ -16,7 +16,7 @@ void insert_at_head(Node* &head, int &value){
     Node* newNode=new Node(value);
     newNode->next=head;
     head=newNode;
-    cout<<"Successfully have exited"<<endl<<endl;
+    cout<<"Successfully have inserted"<<endl<<endl;
 }
 
 //to insert at tail
@@ -24,14 +24,14 @@ void insert_at_tail(Node* &head, int &value){
     Node* newNode=new Node(value);
     if(head==NULL){
         head=newNode;
-        cout<<"successfully have exited"<<endl<<endl;
+        cout<<"successfully have inserted"<<endl<<endl;
         return;
     }
     Node* temp=head;
     while(temp->next!=NULL)
         temp=temp->next;
     temp->next=newNode;
-    cout<<"successfully have exited"<<endl<<endl;
+    cout<<"successfully have inserteds"<<endl<<endl;
 }
 
 //to print the whole list

@@ -36,7 +36,7 @@ void Delete_form_any_position(Node* &head, int &posi){
         return;
     }
     Node* temp=head;
-    for(int i=1; i<posi-1 and temp->next not_eq nullptr; ++i)
+    for(int i=1; i<posi-1; ++i)
         temp=temp->next;
     Node* deleteNode=temp->next;
     temp->next=temp->next->next;
