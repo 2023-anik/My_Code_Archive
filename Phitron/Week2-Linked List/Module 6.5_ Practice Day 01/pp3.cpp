@@ -1,5 +1,7 @@
-/* Take a singly linked list as input and
-print the size of the linked list.*/
+/*
+Take a singly linked list as input and print the middle element.
+If there are multiple values in the middle print both.
+*/
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -11,18 +13,9 @@ class Node{
     Node* next;
     Node(int val){
         this->val=val;
-        this->next=nullptr;
+        this->next=NULL;
     }
 };
-
-int list_size(Node* &head){
-    Node* temp=head;
-    int size=0;
-    while(temp not_eq nullptr){
-        size++;
-        temp=temp->next;
-    }return size;
-}
 
 void insert_at_tail(Node* &head, int value){
     Node* newNode=new Node(value);
@@ -36,24 +29,23 @@ void insert_at_tail(Node* &head, int value){
     temp->next=newNode;
 }
 
+int print_any_position_value(Node* &head, int posi){
+    Node* temp=head;
+    for(int i=1; i<posi; i++)
+        temp=temp->next;
+    return temp->val;
+}
+
 int main(){
     Node* head=nullptr;
     int value;
+    int posi=0;
     while(cin>>value){
-        if(value == -1) break;
+        if(value==-1)break;
         insert_at_tail(head, value);
+        posi++;
     }
-    cout<<list_size(head)<<endl;
+    if(posi%2 not_eq 0)cout<<print_any_position_value(head,(posi/2)+1)<<endl;
+    else cout<<print_any_position_value(head, posi/2)<<' '<<print_any_position_value(head, (posi/2)+1)<<endl;
     return 0;
 }
-
-//****Easiest solution*****
-// int main(){
-//     int value;
-//     int size=0;
-//     while(cin>>value){
-//         if(value==-1)break;;
-//         size++;
-//     }
-//     cout<<size<<endl;
-// }

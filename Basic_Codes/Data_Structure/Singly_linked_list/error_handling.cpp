@@ -49,7 +49,7 @@ void insert_at_any_position(Node* &head, int position, int value){
     }
     Node* temp=head;
     for(int i=1; i<position-1; ++i){
-        if(temp==nullptr){
+        if(temp->next==nullptr){
             cout<<"Invalid postion"<<endl<<endl;
             return;
         }

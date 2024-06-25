@@ -1,9 +1,13 @@
-/* Take a singly linked list as input and
-print the size of the linked list.*/
+/*
+Take a singly linked list as input and check if the linked list is sorted in 
+ascending order.
+*/
 
 #include<bits/stdc++.h>
 using namespace std;
 #define endl '\n'
+#define yes cout<<"YES"<<endl
+#define no cout<<"NO"<<endl
 
 class Node{
     public:
@@ -11,22 +15,13 @@ class Node{
     Node* next;
     Node(int val){
         this->val=val;
-        this->next=nullptr;
+        this->next=NULL;
     }
 };
 
-int list_size(Node* &head){
-    Node* temp=head;
-    int size=0;
-    while(temp not_eq nullptr){
-        size++;
-        temp=temp->next;
-    }return size;
-}
-
 void insert_at_tail(Node* &head, int value){
     Node* newNode=new Node(value);
-    if(head == nullptr){
+    if(head==nullptr){
         head=newNode;
         return;
     }
@@ -43,17 +38,15 @@ int main(){
         if(value == -1) break;
         insert_at_tail(head, value);
     }
-    cout<<list_size(head)<<endl;
+    Node* temp=head;
+    int cek_val=temp->val;
+    while(temp->next not_eq nullptr){
+        temp=temp->next;
+        if(cek_val>temp->val){
+            no;
+            return 0;
+        }cek_val=temp->val;
+    }
+    yes;
     return 0;
 }
-
-//****Easiest solution*****
-// int main(){
-//     int value;
-//     int size=0;
-//     while(cin>>value){
-//         if(value==-1)break;;
-//         size++;
-//     }
-//     cout<<size<<endl;
-// }
