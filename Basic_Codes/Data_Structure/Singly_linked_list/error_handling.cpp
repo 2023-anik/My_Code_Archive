@@ -113,6 +113,10 @@ void delete_from_any_position(Node* &head, int position){
         }
         temp=temp->next;
     }
+    if(temp->next==nullptr){
+        cout<<"Invalid position"<<endl<<endl;
+        return;
+    }
     Node* deleteNode=temp->next;
     temp->next=temp->next->next;
     delete deleteNode;
