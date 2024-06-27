@@ -12,7 +12,7 @@ class Node{
     }
 };
 
-//recursivly print the list
+//recursively print the list
 void print_list(Node* head){
     if(head==nullptr) return;
     cout<<head->val<<' ';
