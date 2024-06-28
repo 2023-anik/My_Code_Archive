@@ -23,12 +23,23 @@ void insert(Node* &head, Node* &tail, int value){
     tail=newNode;
 }
 
-void check(Node* &head){
-    Node* temp=head;
-    for(Node* i=temp; i->next!=NULL; i=i->next)
-        for(Node* j=i->next; j!=NULL; j=j->next)
-            if(i->val==j->val)
-                j->val=-1;
+void check(Node* &head) {
+    if (!head || !head->next) return;
+
+    Node* current = head;
+    while (current) {
+        Node* runner = current;
+        while (runner->next) {
+            if (current->val == runner->next->val) {
+                Node* duplicate = runner->next;
+                runner->next = runner->next->next;
+                delete duplicate; 
+            } else {
+                runner = runner->next;
+            }
+        }
+        current = current->next; 
+    }
 }
 
 void print_list(Node* head){
