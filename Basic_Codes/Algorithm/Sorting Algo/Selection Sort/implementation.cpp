@@ -4,6 +4,8 @@ Given an array of n items
 1. Find the largest item x, in the range of [0...n-1]
 2. Swap x with the (n-1)-th item
 3. Reduce n by 1 and go to Step 1
+
+NB: it is possible  to do usign find the smallest item
 */
 
 #include<bits/stdc++.h>
