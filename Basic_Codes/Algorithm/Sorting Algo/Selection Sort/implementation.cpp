@@ -11,20 +11,14 @@ using namespace std;
 #define endl '\n'
 
 //Consider in asccending order
-// void selection_sort(int *arr, int size){
-//     for(int i=size-1; i>=0; --i){
-//         for(int j=0; j<i; j++)
-//             if(arr[i]<arr[j])
-//                 swap(arr[i], arr[j]);
-//     }
-// }
-//OR,
-
 void selection_sort(int *arr, int size){
-    for(int i=0; i<size; i++)
-        for(int j=i+1; j<size; j++)
-            if(arr[i]>arr[j])
-                swap(arr[i], arr[j]);
+    for(int i=size-1; i>=0; --i){
+        int maxIdx=i;
+        for(int j=0; j<i; j++)
+            if(arr[maxIdx]<arr[j])
+                maxIdx=j;
+        swap(arr[i], arr[maxIdx]);
+    }
 }
 
 
