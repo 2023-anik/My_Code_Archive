@@ -14,12 +14,12 @@ using namespace std;
 
 //Consider in asccending order
 void selection_sort(int *arr, int size){
-    for(int i=size-1; i>=0; --i){
+    for(int i=size-1; i>=1; --i){
         int maxIdx=i;
-        for(int j=0; j<i; j++)
+        for(int j=0; j<i; ++j)
             if(arr[maxIdx]<arr[j])
                 maxIdx=j;
-        swap(arr[i], arr[maxIdx]);
+        swap(arr[maxIdx], arr[i]);
     }
 }
 
