@@ -25,9 +25,9 @@ void selection_sort(int *arr, int size){
 
 
 int main(){
-    int arr[]={37, 10, 14, 29, 13};
-    selection_sort(arr, 5);
-    for(int i=0; i<5; i++)
+    int arr[]={37, 10, 10, 29, 10, 8};
+    selection_sort(arr, 6);
+    for(int i=0; i<6; i++)
         cout<<arr[i]<<' ';
     cout<<endl;
     return 0;
