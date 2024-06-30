@@ -30,7 +30,7 @@ void reverse_print(Node* tail){
 /************######*************/
 void insert_at_tail(Node* &head, Node* &tail, int value){
     Node* newNode=new Node(value);
-    if(head==NULL){
+    if(head==NULL || tail==NULL){
         head=newNode;
         tail=newNode;
         return;
