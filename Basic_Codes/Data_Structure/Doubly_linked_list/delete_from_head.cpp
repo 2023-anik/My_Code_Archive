@@ -28,12 +28,11 @@ void print_reversely(Node* tail){
     }cout<<endl;
 }
 /************######**************/
-void delete_from_tail(Node* &tail){
-    Node* deleteNode=tail;
-    tail=tail->prev;
+void delete_from_head(Node* &head){
+    Node* deleteNode = head;
+    head = head->next;
     delete deleteNode;
-    tail->next=NULL;
-    cout<<deleteNode->val<<endl;
+    head->prev = nullptr;
 }
 
 int main(){
@@ -48,7 +47,7 @@ int main(){
     b->next=tail;
     tail->prev=b;
 
-    delete_from_tail(tail);
+    delete_from_head(head);
     print_list(head);
     print_reversely(tail);
     return 0;
