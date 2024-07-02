@@ -19,12 +19,12 @@ void print(Node* head){
     print(head->next);
 }
 
-void reverse_with_referance(Node* &head, Node* crnt){
+void reverse(Node* &head, Node* crnt){
     if(crnt->next==NULL){
         head=crnt;
         return;
     }
-    reverse_with_referance(head, crnt->next);
+    reverse(head, crnt->next);
     crnt->next->next=crnt;
     crnt->next=NULL;
 }
@@ -37,7 +37,7 @@ int main(){
     a->next=b;
     print(head);
     cout<<endl;
-    reverse_with_referance(head, head);
+    reverse(head, head);
     print(head);
     return 0;
 }
