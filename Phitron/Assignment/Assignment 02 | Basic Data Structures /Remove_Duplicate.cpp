@@ -24,19 +24,21 @@ void insert(Node* &head, Node* &tail, int value){
 }
 
 void check(Node* &head) {
-    Node* temp = head;
-    for (Node* i=temp; i!=NULL; i=i->next) {
+    Node* tmp=head;
+    for(auto i=tmp; i!=NULL; i=i->next){
         Node* prev=i;
-        for (Node* j=i->next; j!=NULL; )
-            if (i->val == j->val) {
-                Node* duplicate = j;
-                prev->next = j->next;
-                j = j->next;
-                delete duplicate;
-            }else{
+        for(auto j=i->next; j!=NULL;){
+            if(i->val==j->val){
+                Node* deleteNode=j;
+                prev->next=j->next;
+                j=j->next;
+                delete deleteNode;
+            }
+            else{
                 prev=j;
                 j=j->next;
             }
+        }
     }
 }
 
