@@ -1,3 +1,7 @@
+/*
+Take two doubly linked lists as input and check if they are the same or not.
+*/
+
 #include<bits/stdc++.h>
 using namespace std;
 #define endl '\n'
