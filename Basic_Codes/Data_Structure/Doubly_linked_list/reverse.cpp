@@ -28,7 +28,7 @@ void print_reversely(Node* tail){
 
 //for odd list
 void reverse(Node* head, Node* tail){
-    while(head!=tail && tail->next!=head){
+    while(head!=tail && head->prev!=tail){
         swap(head->val, tail->val);
         head=head->next;
         tail=tail->prev;
@@ -38,15 +38,16 @@ void reverse(Node* head, Node* tail){
 int main(){
     Node* head=new Node(10);
     Node* a=new Node(20);
-    Node* b=new Node(30);
-    Node* tail=new Node(40);
+    // Node* b=new Node(30);
+    // Node* tail=new Node(40);
     // Node* c=new Node(50);
     head->next=a;
     a->prev=head;
-    a->next=b;
-    b->prev=a;
-    b->next=tail;
-    tail->prev=b;
+    Node* tail=a;
+    // a->next=b;
+    // b->prev=a;
+    // b->next=tail;
+    // tail->prev=b;
     // tail->next=c;
     // c->prev=tail;
     // tail=c;
