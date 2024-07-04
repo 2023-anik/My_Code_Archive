@@ -11,7 +11,7 @@ struct ListNode {
  };
 
  //Solution****
- class Solution {
+class Solution {
 public:
     ListNode* mergeNodes(ListNode* head) {
         auto tmp=head->next;
