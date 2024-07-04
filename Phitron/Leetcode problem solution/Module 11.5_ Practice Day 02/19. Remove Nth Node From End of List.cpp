@@ -9,6 +9,7 @@ struct ListNode {
       ListNode(int x, ListNode *next) : val(x), next(next) {}
  };
 
+//Solution****
 class Solution {
 public:
     int size_list(ListNode* head){
@@ -34,7 +35,6 @@ public:
         int from_head=lst_size-n;
         if(from_head==0){
             if(head==nullptr)return head;
-            // head=head->next;
             return head->next;
         }
         for(int i=1; i<from_head; ++i)
