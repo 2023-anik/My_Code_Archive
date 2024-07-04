@@ -22,10 +22,10 @@ public:
     ListNode* swapNodes(ListNode* head, int k) {
         if(head==nullptr)return head;
         int m=k;
-        m--;
+        m--;//converted index to to 0-based
         auto dummy1=head;
         for(int i=1; i<=m; ++i) dummy1=dummy1->next;
-        int n=size_list(head)-k;
+        int n=size_list(head)-k;//already 0-based
         auto dummy2=head;
         for(int i=1; i<=n; ++i) dummy2=dummy2->next;
         int temp=dummy1->val;
