@@ -22,7 +22,7 @@ public:
     ListNode* swapNodes(ListNode* head, int k) {
         if(head==nullptr)return head;
         int m=k;
-        m--;//converted index to to 0-based
+        m--;//convert index to 0-based
         auto dummy1=head;
         for(int i=1; i<=m; ++i) dummy1=dummy1->next;
         int n=size_list(head)-k;//already 0-based
