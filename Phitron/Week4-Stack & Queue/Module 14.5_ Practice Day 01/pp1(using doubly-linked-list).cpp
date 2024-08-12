@@ -69,7 +69,7 @@ int main(){
         int x; cin>>x;
         s2.push(x);
     }
-    if(s1.size()!=s2.size()){
+    if(n!=m){
         cout<<"NO"<<endl;
         return 0;
     }
