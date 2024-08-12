@@ -30,9 +30,11 @@ class myQueue{
     }
     void pop(){
         sz--;
+        Node* deleteNode=head;
         head=head->next;
         if(head==NULL)
             tail=NULL;
+        delete deleteNode;
     }
     int front(){
         return head->val;
