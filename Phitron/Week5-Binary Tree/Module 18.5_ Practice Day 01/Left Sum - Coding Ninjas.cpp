@@ -2,7 +2,7 @@
 https://www.naukri.com/code360/problems/left-sum_920380?leftPanelTabValue=PROBLEM 
 */
 
-/*
+
 long long leftSum(BinaryTreeNode<int> *root)
 {
 	// Write your code here.
@@ -15,4 +15,3 @@ long long leftSum(BinaryTreeNode<int> *root)
 	sum+=leftSum(root->right);
 	return sum;
 }
-*/
