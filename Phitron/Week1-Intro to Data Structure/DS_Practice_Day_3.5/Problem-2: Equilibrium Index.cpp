@@ -6,7 +6,10 @@ using namespace std;
 #define yes cout<<"YES"<<'\n'
 #define fast() ios_base::sync_with_stdio(0),cin.tie(0),cout.tie(0)
 
-void solve(){
+
+int32_t main(){
+    fast();
+    
     int n;
     cin>>n;
     vector<int>nums(n);
@@ -24,11 +27,5 @@ void solve(){
         }
         left_sum+=nums[i];
     }
-}
-
-int32_t main(){
-    fast();
-    int tc=1; //cin>>tc;
-    while(tc--) solve();
     return 0;
 }

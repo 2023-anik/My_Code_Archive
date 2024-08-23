@@ -6,7 +6,10 @@ using namespace std;
 #define yes cout<<"YES"<<'\n'
 #define fast() ios_base::sync_with_stdio(0),cin.tie(0),cout.tie(0)
 
-void solve(){
+
+int32_t main(){
+    fast();
+
     int n, q;
     cin >> n;
 
@@ -23,11 +26,5 @@ void solve(){
         if(found) yes;
         else no;
     }
-}
-
-int32_t main(){
-    fast();
-    int tc=1; //cin>>tc;
-    while(tc--) solve();
     return 0;
 }
