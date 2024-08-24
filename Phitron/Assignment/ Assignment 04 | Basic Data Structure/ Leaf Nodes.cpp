@@ -14,15 +14,14 @@ class Node{
     }
 };
 
-int mc=0;
+vector<int>v;
 
-void sum(Node* root){
+void getLeafs(Node* root){
     if(!root) return;
-    if(root->left || root->right)
-        mc+=root->val;
-    // return sum(root->left)+sum(root->right)+root->val;
-    sum(root->left);
-    sum(root->right);
+    if(!root->left && !root->right)
+        v.push_back(root->val);
+    getLeafs(root->left);
+    getLeafs(root->right);
 }
 
 int main(){
@@ -49,7 +48,10 @@ int main(){
         if(ff->left) q.push(ff->left);
         if(ff->right) q.push(ff->right);
     }
-    sum(root);
-    cout<<mc<<endl;
+    getLeafs(root);
+    
+    sort(v.rbegin(), v.rend());
+    for(int x:v) cout<<x<<' ';
+
     return 0;
 }
