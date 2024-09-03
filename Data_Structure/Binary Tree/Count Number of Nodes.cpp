@@ -18,10 +18,11 @@ class Node{
 int countNode(Node* root){
     if(root==NULL) return 0;
 
-    int l=countNode(root->left);
-    int r=countNode(root->right);
+    // int l=countNode(root->left);
+    // int r=countNode(root->right);
 
-    return l+r+1;
+    // return l+r+1;
+    return countNode(root->left)+countNode(root->right)+1;
 }
 
 int main(){
