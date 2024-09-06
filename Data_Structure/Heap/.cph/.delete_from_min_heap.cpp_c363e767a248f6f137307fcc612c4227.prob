@@ -1,0 +1,1 @@
+{"name":"Local: delete_from_min_heap","url":"/home/vuban/Documents/My_Code_Archive/Data_Structure/Heap/delete_from_min_heap.cpp","tests":[{"id":1725406619280,"input":"5\n50 40 30 20 10","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/vuban/Documents/My_Code_Archive/Data_Structure/Heap/delete_from_min_heap.cpp","group":"local","local":true}
