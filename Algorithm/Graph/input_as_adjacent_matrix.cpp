@@ -6,7 +6,7 @@ int main(){
     int n, e; //n is number of node; e is number of edge
     cin>>n>>e;
     int adjMat[n][n];
-    memset(adjMat, 0, sizeof(adjMat));
+    memset(adjMat, 0, sizeof(adjMat));//to assign zero(0) in all index of 2D array
     while(e--){
         int a, b;
         cin>>a>>b;
