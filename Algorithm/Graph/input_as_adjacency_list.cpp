@@ -23,7 +23,13 @@ int main(){
         //     cout<<arr[0][i]<<endl;
 
     //to check which values are connected with 3
-    for(auto x:arr[3])
-        cout<<x<<endl;
+    // for(auto x:arr[3])
+    //     cout<<x<<endl;
+
+    //
+    //to see which node is connected with other nodes
+    for(int i=0; i<n; i++)
+        for(auto x:arr[i])
+            cout<<i<<" "<<x<<endl;
     return 0;
 }
