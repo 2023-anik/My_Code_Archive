@@ -6,6 +6,7 @@ int main(){
     int n, e;
     cin>>n>>e;
     vector<int>arr[n];
+    memset(arr, 0, sizeof(arr));
     while(e--){
         int a, b; 
         cin>>a>>b;
