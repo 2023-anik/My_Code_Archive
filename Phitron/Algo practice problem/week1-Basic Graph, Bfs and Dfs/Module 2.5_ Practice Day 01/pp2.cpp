@@ -2,53 +2,56 @@
 using namespace std;
 #define endl '\n'
 
-vector<int>v[1005];
+vector<int>mat[1005];
 bool vis[1005];
 int level[1005];
 
-void bfs(int src){
+void bfs(){
     queue<int>q;
-    q.push(src);
-    vis[src] = true;
-    level[src] = 0;
-    bool found = false;
+    q.push(0);
+    vis[0] = true;
+    level[0] = 0;
     while(!q.empty()){
         int par = q.front();
         q.pop();
 
         //ja korar ekhane korte hobe
-        // cout<<par<<endl;
+        
 
         //traversing at a parent node to find child using adjacency list
-        for(auto child : v[par]){
+        for(auto child : mat[par])
             if(!vis[child]){
                 q.push(child);
                 vis[child] = true;
                 level[child] = level[par]+1;
-            }    
-        }
+            }
+
     }
 }
 
 int main(){
-    memset(v, 0, sizeof(v));
+    memset(mat, 0, sizeof(mat));
     int n, e;
     cin>>n>>e;
     while(e--){
         int a, b;
         cin>>a>>b;
-        v[a].push_back(b);
-        v[b].push_back(a);//for undirected graph
+        mat[a].push_back(b);
+        mat[b].push_back(a);
     }
-    int src;
-    cin>>src;
+    int l; cin>>l;
     memset(vis, false, sizeof(vis));
     memset(level, -1, sizeof(level));
-    bfs(src);
-
-    //to see the level
+    bfs();
+    vector<int>v;
     for(int i=0; i<n; i++)
-        cout<<i<<" "<<level[i]<<endl;
+        if(level[i]==l)
+            v.push_back(i);
+    
+    sort(v.rbegin(), v.rend());
+    for(int x:v)
+        cout<<x<<" ";
+    cout<<endl;
 
     return 0;
 }

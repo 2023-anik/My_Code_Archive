@@ -2,49 +2,51 @@
 using namespace std;
 #define endl '\n'
 
-vector<int>v[1005];
+vector<int>mat[1005];
 bool vis[1005];
 
-void bfs(int src, int val){
-    queue<pair<int, int>>q;
+void bfs(int src, int des){
+    queue<pair<int,int>> q;
     q.push({src, 0});
-    vis[src] = true;
     while(!q.empty()){
         pair<int,int> p = q.front();
         int par = p.first;
         int level = p.second;
         q.pop();
 
-        if(par==val){
+        if(par==des){
             cout<<level<<endl;
             return;
         }
 
-        for(int child:v[par]){
+        for(auto child:mat[par]){
             if(!vis[child]){
                 q.push({child, level+1});
                 vis[child] = true;
             }
         }
     }
-    cout<<"pai nai"<<endl;
+    cout<<-1<<endl;
     return;
 }
 
 int main(){
-    memset(v, 0, sizeof(v));
+    memset(mat, 0, sizeof(mat));
     int n, e;
     cin>>n>>e;
     while(e--){
         int a, b;
         cin>>a>>b;
-        v[a].push_back(b);
-        v[b].push_back(a);//for undirected graph
+        mat[a].push_back(b);
+        mat[b].push_back(a);
     }
-    int src, x;
-    cin>>src>>x;
-    memset(vis, false, sizeof(vis));
-    bfs(src, x);
-
+    int q;
+    cin>>q;
+    while(q--){
+        int src, des;
+        cin>>src>>des;
+        memset(vis, false, sizeof(vis));
+        bfs(src, des);
+    }
     return 0;
 }

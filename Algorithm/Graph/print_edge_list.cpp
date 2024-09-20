@@ -5,7 +5,7 @@ using namespace std;
 int main(){
     int n, e;
     cin>>n>>e;
-    vector<pair<int,int>>v;
+    vector<pair<int,int>>v; 
     while(e--){
         int a, b;
         cin>>a>>b;
