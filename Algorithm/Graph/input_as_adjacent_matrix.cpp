@@ -25,5 +25,6 @@ int main(){
     if(adjMat[3][4]==1)
         cout<<"Connection ache"<<endl;
     else cout<<"Connection nai"<<endl;
+    
     return 0;
 }
