@@ -28,7 +28,7 @@ void bfs(int si, int sj){
         q.pop();
         for(int i=0; i<4; i++){
             int ci = a+d[i].first;
-            int cj = a+d[i].second;
+            int cj = b+d[i].second;
             if(valid(ci, cj) && !vis[ci][cj]){
                 q.push({ci, cj});
                 vis[ci][cj] = true;
@@ -49,6 +49,7 @@ int main(){
     memset(vis, false, sizeof(vis));
     memset(level, -1, sizeof(level));
     bfs(si, sj);
+    cout<<level[2][3];
 
     return 0;
 }

@@ -1,0 +1,1 @@
+{"name":"Local: bfs_on_2d_grid","url":"/home/vuban/Documents/My_Code_Archive/Algorithm/Graph/bfs_on_2d_grid.cpp","tests":[{"id":1728558346306,"input":"3 4\n....\n....\n....\n0 0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/vuban/Documents/My_Code_Archive/Algorithm/Graph/bfs_on_2d_grid.cpp","group":"local","local":true}
