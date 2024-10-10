@@ -24,7 +24,7 @@ void dfs(int si, int sj){
         int ci = si+d[i].first;
         int cj = sj+d[i].second;
         if(valid(ci, cj) && !vis[ci][cj])
-            dfs(ci, cj);
+            dfs(ci, cj);    
     }
 }
 
