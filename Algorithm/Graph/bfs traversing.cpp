@@ -4,23 +4,20 @@ using namespace std;
 
 vector<int>v[1005];
 bool vis[1005];
-vector<int>nv;
 
-void bfs(int l){
-    queue<pair<int,int>>q;
-    q.push({0,0});
-    vis[0] = true;
+void bfs(int src){
+    queue<int>q;
+    q.push(src);
+    vis[src]=true;
     while(!q.empty()){
-        pair<int,int> p = q.front();
+        int par = q.front();
         q.pop();
-        int par = p.first;
-        int level = p.second;
 
-        if(level==l)nv.push_back(par);
+        cout<<par<<endl;
 
         for(int child:v[par])
             if(!vis[child]){
-                q.push({child, level+1});
+                q.push(child);
                 vis[child] = true;
             }
     }
@@ -36,11 +33,8 @@ int main(){
         v[a].push_back(b);
         v[b].push_back(a);
     }
-    int l; cin>>l;
-    bfs(l);
-    sort(nv.rbegin(), nv.rend());
-    for(int c:nv)
-        cout<<c<<' ';
-    cout<<endl;
+    int src;
+    cin>>src;
+    bfs(src);
     return 0;
 }

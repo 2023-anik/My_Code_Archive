@@ -17,7 +17,7 @@ int bfs(int node){
 }
 
 int main(){
-    memset(mat, 0, sizeof(mat));
+    // memset(mat, 0, sizeof(mat));
     int n, e;
     cin>>n>>e;
     while(e--){

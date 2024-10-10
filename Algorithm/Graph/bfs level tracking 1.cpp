@@ -31,7 +31,7 @@ void bfs(int src){
 }
 
 int main(){
-    memset(v, 0, sizeof(v));
+    // memset(v, 0, sizeof(v));
     int n, e;
     cin>>n>>e;
     while(e--){
