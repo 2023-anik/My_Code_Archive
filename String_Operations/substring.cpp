@@ -19,6 +19,7 @@ void solve(){
     FOR(i, n)
         FOR1(len, n-i)
             cout<<s.substr(i, len)<<endl;
+        //time complexity: O(n!)
 }
 
 int32_t main(){

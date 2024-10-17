@@ -19,6 +19,7 @@ void solve(){
     do{
         cout<<s<<endl;
     }while(next_permutation(all(s)));
+    //time complexity: O(n)
 }
 
 int32_t main(){
