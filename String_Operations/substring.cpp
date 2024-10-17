@@ -14,11 +14,11 @@ typedef vector<int> vi;
 typedef pair<int, int> pii;
 
 void solve(){
-    string s="ABCD";
-    sort(all(s));
-    do{
-        cout<<s<<endl;
-    }while(next_permutation(all(s)));
+    string s = "ABCD";
+    int n = s.length();
+    FOR(i, n)
+        FOR1(len, n-i)
+            cout<<s.substr(i, len)<<endl;
 }
 
 int32_t main(){
