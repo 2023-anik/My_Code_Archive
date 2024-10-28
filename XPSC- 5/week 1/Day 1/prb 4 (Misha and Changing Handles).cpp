@@ -15,29 +15,15 @@ typedef pair<int, int> pii;
 
 void solve(){
     int n;
-    cin>>n;
-    string s;
-    cin>>s;
-    // while(!s.empty()){
-    //     if(s.front()=='W')
-    //         s.erase(s.begin());
-    //     else if(s.back()=='W')
-    //         s.pop_back();
-    //     else {
-    //         cout<<s.size()<<endl;
-    //         return;
-    //     }
-    // }
-    int firstPos = -1, lastPos = -1;
-    firstPos = s.find('B');
-    lastPos = s.rfind('B');
-    cout << lastPos - firstPos + 1 << endl;
+    cin >> n;
+    
+    
 }
 
 int32_t main(){
     FAST
     int t=1;
-    cin>>t;
+    // cin>>t;
     while(t--) solve();
     return 0;
 }
