@@ -8,26 +8,21 @@ using namespace std;
 #define yes cout<<"YES"<<'\n'
 #define endl '\n'
 typedef vector<int> vi;
-typedef pair<char, char> pii;
-
-int cnt(string &s, char x){
-    return count(s.begin(), s.end(), x);
-}
+typedef pair<int, int> pii;
 
 void solve(){
-    int n, k;
-    cin >> n >> k;
-    string a, b;
-    cin >> a >> b;
-    int cnta1 = cnt(a, '1');
-    // int cnta0 = cnt(a, '0');
-    int cntb1 = cnt(b, '1');
-    // int cntb0 = cnt(b, '0');
-    if(cnta1!=cntb1){
-        no;
-        return;
-    }
-    
+    int n;
+    cin >> n;
+    int i, cnte = 0, cnto = 0;
+    for (i = 1; i <= n; i++)
+        if(n%i==0)
+            (i % 2 == 0 ? cnte++ : cnto++);
+    if (cnte > cnto)
+        cout << 1 << endl;
+    else if(cnte == cnto) 
+        cout << 0 << endl;
+    else
+        cout << -1 << endl;
 }
 
 int32_t main(){

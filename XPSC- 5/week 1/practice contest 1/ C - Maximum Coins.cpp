@@ -15,10 +15,10 @@ void solve(){
     cin >> n >> x;
     int i, tw = 0;
     for (i = 0; i < x; i++)
-        tw += pow(2, n - i);
+        tw += (1<<(n-i));
     int tl = 0;
     for (i = 1; i <= (n - x); i++)
-        tl += pow(2, i);
+        tl += (1<<i);
     cout << tw-tl << endl;
 }
 

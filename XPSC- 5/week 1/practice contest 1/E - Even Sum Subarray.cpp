@@ -8,26 +8,27 @@ using namespace std;
 #define yes cout<<"YES"<<'\n'
 #define endl '\n'
 typedef vector<int> vi;
-typedef pair<char, char> pii;
-
-int cnt(string &s, char x){
-    return count(s.begin(), s.end(), x);
-}
+typedef pair<int, int> pii;
 
 void solve(){
-    int n, k;
-    cin >> n >> k;
-    string a, b;
-    cin >> a >> b;
-    int cnta1 = cnt(a, '1');
-    // int cnta0 = cnt(a, '0');
-    int cntb1 = cnt(b, '1');
-    // int cntb0 = cnt(b, '0');
-    if(cnta1!=cntb1){
-        no;
-        return;
+    int n;
+    cin >> n;
+    vi vec(n);
+    int i, j, mxSize = 0, mxSum, len;
+    for (i = 0; i<n; i++)
+        cin >> vec[i];
+    for (i = 0; i < n; i++){
+        mxSum = 0;
+        len = 0;
+        for (j = i; j < n; j++)
+        {
+            len++;
+            mxSum += vec[j];
+            if(mxSum%2==0)
+                mxSize = max(mxSize, len);
+        }
     }
-    
+    cout << mxSize << endl;
 }
 
 int32_t main(){
