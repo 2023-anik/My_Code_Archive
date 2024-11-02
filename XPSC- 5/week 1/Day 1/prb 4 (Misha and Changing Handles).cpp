@@ -18,8 +18,7 @@ void solve(){
     cin >> n;
     string a, b, s;
     map<string, string> ans, has;
-    FOR(i, n)
-    {
+    FOR(i, n){
         cin >> a >> b;
         if(has.find(a) != has.end()){
             s = has[a];
