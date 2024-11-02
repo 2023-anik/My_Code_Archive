@@ -16,13 +16,13 @@ typedef pair<int, int> pii;
 void solve(){
     int n;
     cin >> n;
+    string a, b, s;
     map<string, string> ans, has;
     FOR(i, n)
     {
-        string a, b;
         cin >> a >> b;
         if(has.find(a) != has.end()){
-            string s = has[a];
+            s = has[a];
             ans[s] = b;
             has.erase(a);
             has[b] = s;
