@@ -11,20 +11,39 @@ typedef vector<int> vi;
 typedef pair<int, int> pii;
 
 void solve() {
-    string s1, s2;
-    cin >> s1;
-    for (char ch : s1){
-        if (ch == 'b') {
-            auto it = find_if(rall(s2), [](char c) { return c >= 'a' && c <= 'z'; });
-            if (it != s2.rend()) 
-                s2.erase(next(it).base());
-        } else if (ch == 'B') {
-            auto it = find_if(rall(s2), [](char c) { return c >= 'A' && c <= 'Z'; });
-            if (it != s2.rend())
-                s2.erase(next(it).base());
-        } else s2 += ch;
-    }
-    cout << s2 << endl;
+    string s;
+        cin >> s;
+        int ch_lower = 0, ch_upper = 0;
+        deque<char> dq;
+        for (int i = s.size() - 1; i >= 0; i--)
+        {
+            if (s[i] == 'B')
+            {
+                ch_upper++;
+                continue;
+            }
+            if (s[i] == 'b')
+            {
+                ch_lower++;
+                continue;
+            }
+            if (ch_lower && islower(s[i]))
+            {
+                ch_lower--;
+                continue;
+            }
+            if (ch_upper && isupper(s[i]))
+            {
+                ch_upper--;
+                continue;
+            }
+            dq.push_front(s[i]);
+        }
+        for (auto &it : dq)
+        {
+            cout << it;
+        }
+        cout << endl;
 }
 
 int32_t main(){
