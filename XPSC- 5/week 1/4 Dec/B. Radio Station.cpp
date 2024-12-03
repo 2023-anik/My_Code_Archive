@@ -1,3 +1,5 @@
+//https://codeforces.com/contest/918/problem/B
+
 #include<bits/stdc++.h>
 using namespace std;
 #define int long long
@@ -11,33 +13,25 @@ typedef vector<int> vi;
 typedef pair<int, int> pii;
 
 void solve(){
-    int n;
-    cin >> n;
-    vi a(n);
-    for(auto &it:a)
-        cin >> it;
-    int i, x;
-    // char ch;
-    string s;
-    for (i = 0; i < n; i++){
-        cin >> x >> s;
-        for(char ch:s){
-            ch == 'D' ? a[i]++ : a[i]--;
-            if(a[i]>=10)
-                a[i] = 0;    
-            if(a[i]<0)
-                a[i] = 9;
-        }
+    int n, m;
+    cin >> n >> m;
+    string a, b;
+    map<string, string> mp;
+    while(n--){
+        cin >> a >> b;
+        mp[b] = a;
     }
-    for(auto &it:a)
-        cout << it <<" ";
-    cout << endl;
+    while(m--){
+        cin >> a >> b;
+        b.pop_back();
+        cout << a << " " << b << "; #" << mp[b] << endl;
+    }
 }
 
 int32_t main(){
     FAST
     int t=1;
-    cin>>t;
+    // cin>>t;
     while(t--) solve();
     return 0;
 }

@@ -1,3 +1,5 @@
+//https://codeforces.com/contest/4/problem/C
+
 #include<bits/stdc++.h>
 using namespace std;
 #define int long long
@@ -13,31 +15,22 @@ typedef pair<int, int> pii;
 void solve(){
     int n;
     cin >> n;
-    vi a(n);
-    for(auto &it:a)
-        cin >> it;
-    int i, x;
-    // char ch;
+    map<string, int> mp;
     string s;
-    for (i = 0; i < n; i++){
-        cin >> x >> s;
-        for(char ch:s){
-            ch == 'D' ? a[i]++ : a[i]--;
-            if(a[i]>=10)
-                a[i] = 0;    
-            if(a[i]<0)
-                a[i] = 9;
-        }
+    while (n--){
+        cin >> s;
+        if(mp[s]==0)
+            cout << "OK" << endl;
+        else
+            cout << s << mp[s] << endl;
+        mp[s]++;
     }
-    for(auto &it:a)
-        cout << it <<" ";
-    cout << endl;
 }
 
 int32_t main(){
     FAST
     int t=1;
-    cin>>t;
+    // cin>>t;
     while(t--) solve();
     return 0;
 }

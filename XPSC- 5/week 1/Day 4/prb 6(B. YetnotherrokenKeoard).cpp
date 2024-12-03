@@ -12,44 +12,31 @@ typedef pair<int, int> pii;
 
 void solve() {
     string s;
-        cin >> s;
-        int ch_lower = 0, ch_upper = 0;
-        deque<char> dq;
-        for (int i = s.size() - 1; i >= 0; i--)
-        {
-            if (s[i] == 'B')
-            {
-                ch_upper++;
-                continue;
-            }
-            if (s[i] == 'b')
-            {
-                ch_lower++;
-                continue;
-            }
-            if (ch_lower && islower(s[i]))
-            {
-                ch_lower--;
-                continue;
-            }
-            if (ch_upper && isupper(s[i]))
-            {
-                ch_upper--;
-                continue;
-            }
-            dq.push_front(s[i]);
-        }
-        for (auto &it : dq)
-        {
-            cout << it;
-        }
-        cout << endl;
+    cin >> s;
+    reverse(s.begin(), s.end());
+    deque<char> dq;
+    int chUp = 0, chLo = 0;
+    for (char ch : s) {
+        if (ch == 'B')
+            chUp++;
+        else if (ch == 'b')
+            chLo++;
+        else if (chUp && isupper(ch))
+            chUp--;
+        else if (chLo && islower(ch))
+            chLo--;
+        else dq.push_front(ch);
+    }
+    for (auto &it : dq)
+        cout << it;
+    cout << endl;
+    return;
 }
 
-int32_t main(){
+int32_t main() {
     FAST
-    int t=1;
-    cin>>t;
+    int t = 1;
+    cin >> t;
     while(t--) solve();
     return 0;
 }
