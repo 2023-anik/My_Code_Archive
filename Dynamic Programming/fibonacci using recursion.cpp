@@ -14,7 +14,7 @@ typedef vector<int> vi;
 typedef pair<int, int> pii;
 
 int fibo(int n){
-    if(n==0 || n==1) return n;
+    if(n==0 || n==1) return n;//base case
     return fibo(n-1) + fibo(n-2);
     //O(2^n)
     //value of n must be until 20 to run this code in 1sec
