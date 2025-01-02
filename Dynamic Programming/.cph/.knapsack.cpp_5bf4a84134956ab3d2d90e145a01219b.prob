@@ -1,0 +1,1 @@
+{"name":"Local: knapsack","url":"/home/vuban/Documents/My_Code_Archive/Dynamic Programming/knapsack.cpp","tests":[{"id":1734527311953,"input":"4\n2 3 4 5\n1 3 5 3\n8","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/vuban/Documents/My_Code_Archive/Dynamic Programming/knapsack.cpp","group":"local","local":true}
