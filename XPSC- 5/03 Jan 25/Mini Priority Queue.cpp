@@ -32,5 +32,11 @@ int main(){
 
     //empty function: returns true if the priority queue is empty
     cout<<"Empty -> "<<pq.empty()<<endl;
+
+    //display elements
+    while(!pq.empty()){
+        cout << pq.top() << " ";
+        pq.pop();
+    }
     return 0;
 }
