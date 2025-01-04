@@ -29,12 +29,12 @@ void solve(){
         }
         else if(type==2){
             cout << firstCame.begin()->first << " ";
-            largestTaka.erase(largestTaka.find({firstCame.begin()->second, (firstCame.begin()->first)*(-1)}));
+            largestTaka.erase(largestTaka.find({firstCame.begin()->second, -(firstCame.begin()->first)}));
             firstCame.erase(firstCame.begin());
         }
         else{
-            cout << (largestTaka.rbegin()->second)*(-1) << " ";
-            firstCame.erase(firstCame.find({(largestTaka.rbegin()->second)*(-1), largestTaka.rbegin()->first}));
+            cout << -(largestTaka.rbegin()->second) << " ";
+            firstCame.erase(firstCame.find({-(largestTaka.rbegin()->second), largestTaka.rbegin()->first}));
             // largestTaka.erase(largestTaka.rbegin()); **wrong** cause can't derectly erase for reverse iterator
             // largestTaka.erase(prev(largestTaka.end()));
             largestTaka.erase(--largestTaka.end());//shortcut
