@@ -25,9 +25,9 @@ void solve(){
     while (k--){
         cin >> a >> b;
         if(mp.find(a)!=mp.end() && mp.find(b)!=mp.end())
-            cout << (*mp[a].begin() < *mp[b].rbegin() ? "YES" : "NO") << endl;
+            *mp[a].begin() < *mp[b].rbegin() ? yes : no;
         else
-            cout << "NO" << endl;
+            no;
     }
 }
 
