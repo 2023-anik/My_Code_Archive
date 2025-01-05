@@ -38,25 +38,25 @@ void solve(){
     int n, m;
     cin >> n >> m;
     vi a(n), b(m);
-    
     for(auto &it:a)
         cin >> it;
     for(auto &it:b)
         cin >> it;
 
-    int i = 0, j = 0, crnt, cnt1, cnt2;
-    int ans = 0;
-    while(i < n && j < m){
+    int i = 0, j = 0, cnt1, cnt2, crnt, ans = 0;
+    while(i<n && j<m){
         crnt = a[i], cnt1 = 0, cnt2 = 0;
-        while (i < n && crnt==a[i]){
+
+        while(i < n && crnt == a[i])
             i++, cnt1++;
-        }
-        while(j < m && crnt>b[j])
+
+        while(j<m && crnt>b[j])
             j++;
-        while(j < m && crnt==b[j]){
+
+        while(j<m && crnt == b[j])
             j++, cnt2++;
-        }
-        ans += cnt1 * cnt2;
+
+        ans += (cnt1 * cnt2);
     }
     cout << ans << endl;
 }

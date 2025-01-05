@@ -10,16 +10,26 @@ using namespace std;
 typedef vector<int> vi;
 typedef pair<int, int> pii;
 
-void solve(){
-    int n, m;
-    cin >> n >> m;
-    cout << max(n, m)+1 << endl;
+void solve() {
+    string s1, s2;
+    getline(cin, s1);
+    getline(cin, s2);
+
+    try {
+        int x = stoi(s1);
+        int y = stoi(s2);
+        cout << x + y << endl;
+    } catch (const exception &e) {
+        cerr << "Invalid input: " << e.what() << endl;
+    }
 }
 
 int32_t main(){
     FAST
     int t=1;
     cin>>t;
-    while(t--) solve();
+    cin.ignore();
+    while (t--)
+        solve();
     return 0;
 }

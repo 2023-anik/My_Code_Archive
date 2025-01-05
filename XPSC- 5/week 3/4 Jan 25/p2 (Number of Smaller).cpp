@@ -33,7 +33,7 @@ void solve(){
     //     cout << cnt << " ";
     // }
 
-    //optimized solution in O(n)
+    // optimized solution in O(n)
     int l1 = 0, l2 = 0, cnt = 0;
     // vi ans;
     while(l2<m){
