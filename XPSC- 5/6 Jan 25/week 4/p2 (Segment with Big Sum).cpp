@@ -1,4 +1,4 @@
-//https://codeforces.com/edu/course/2/lesson/9/2/practice/contest/307093/problem/A
+//https://codeforces.com/edu/course/2/lesson/9/2/practice/contest/307093/problem/B
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -19,34 +19,31 @@ void solve(){
     for(auto &it:a)
         cin >> it;
 
-    //Brute Force Solutions
-    // int ans = 0;
-    // for(int i = 0; i < n; i++){
-    //     int sum = 0;
-    //     for (int j = i; j < n; j++){
+    //Brute Force Approach
+    // int sum, ans = (1LL)*INT_MAX;
+    // for(int i=0; i<n; i++){
+    //     sum = 0;
+    //     for(int j=i; j<n; j++){
     //         sum += a[j];
-    //         if (sum <= s)
-    //             ans = max(ans, j - i + 1);
-    //         else {
-    //             cout << ans << endl;
-    //             return;
+    //         if(sum>=s){
+    //             ans = min(ans, j - i + 1);
     //         }
     //     }
     // }
+    // cout << (ans == (1LL) * INT_MAX ? (1ll)*(-1) : ans) << endl;
 
-    //optimized approach
-    int i = 0, j = 0, sum = 0, ans = 0;
-    while(j<n){
+    //Optimized Approach
+    int i = 0, j = 0, sum = 0, ans = INT_MAX;
+    while(j < n){
         sum += a[j];
-        if(sum<=s)
-            ans = max(ans, j - i + 1);
-        else{
+        while(sum>=s){
+            ans = min(ans, j - i + 1);
             sum -= a[i];
             i++;
         }
         j++;
     }
-    cout << ans << endl;
+    cout << (ans == INT_MAX ? -1 : ans) << endl;
 }
 
 int32_t main(){
