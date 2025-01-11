@@ -1,0 +1,1 @@
+{"name":"Local: b","url":"/home/vuban/Documents/My_Code_Archive/XPSC- 5/Week 11/b.cpp","tests":[{"id":1736608181543,"input":"2\n1\n1\n4\n4 4 4 4","output":"1\n8"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/vuban/Documents/My_Code_Archive/XPSC- 5/Week 11/b.cpp","group":"local","local":true}
