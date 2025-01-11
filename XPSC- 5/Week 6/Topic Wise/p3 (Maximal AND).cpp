@@ -13,13 +13,13 @@ typedef vector<int> vi;
 typedef pair<int, int> pii;
 const int B = 30;
 
-map<int, int> initializeBits(int size, int value){
-    int i;
-    map<int, int> bits;
-    for (i = 0; i < size; i++)
-        bits[i] = 0;
-    return bits;
-}
+// map<int, int> initializeBits(int size, int value){
+//     int i;
+//     map<int, int> bits;
+//     for (i = 0; i < size; i++)
+//         bits[i] = 0;
+//     return bits;
+// }
 
 void solve(){
     int n, k;
