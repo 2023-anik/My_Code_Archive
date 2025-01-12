@@ -1,0 +1,1 @@
+{"name":"Local: p5 (NASA)","url":"/home/vuban/Documents/My_Code_Archive/XPSC- 5/Week 6/Topic Wise/p5 (NASA).cpp","tests":[{"id":1736651556364,"input":"2\n4\n13 27 12 26\n3\n2 2 2","output":"8\n6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/vuban/Documents/My_Code_Archive/XPSC- 5/Week 6/Topic Wise/p5 (NASA).cpp","group":"local","local":true}
