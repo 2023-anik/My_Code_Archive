@@ -3,35 +3,49 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define int long long
-#define all(x) (x).begin(), (x).end()
-#define rall(x) (x).rbegin(), (x).rend()
 #define FAST ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define no cout<<"NO"<<'\n'
 #define yes cout<<"YES"<<'\n'
 #define endl '\n'
-typedef vector<int> vi;
-typedef pair<int, int> pii;
 
 void solve(){
     int n;
     cin >> n;
     string s, t;
     cin >> s >> t;
-    int y = s[0] - '0'; // Convert char to int
-    if(y==1){
+    if(s[0]=='1'){
         yes;
         return;
     }
-    for (int i = 0; i < n; i++){
-        if(s[i] != t[i]){
-            int x = s[i] - '0'; // Convert char to int
-            int z = (x ^ y);
-            s[i] = z + '0'; // Convert int to char
-        }
-        
+    // int index_of_1st_one_of_s = 0;
+    // int index_of_1st_one_of_t = 0;
+    // int i;
+    // for (i = 0; i < s.length(); i++){
+    //     index_of_1st_one_of_s++;
+    //     if (s[i] =='1'){
+    //         break;
+    //     }
+    // }
+    // for (i = 0; i < t.length(); i++){
+    //     index_of_1st_one_of_t++;
+    //     if(t[i]=='1'){
+    //         break;
+    //     }
+    // }
+    int index_of_1st_one_of_s = s.find('1');// s.find_first_not_of('0');
+    int index_of_1st_one_of_t = t.find('1');// t.find_first_not_of('0');
+    if(index_of_1st_one_of_t<index_of_1st_one_of_s){
+        no;
+        return;
     }
-    // cout << s << " " << t << endl;
-    s == t ? yes : no;
+    // int count_of_zero_of_s = count(s.begin(), s.end(), '0');
+    auto find_1_in_s = find(s.begin(), s.end(), '1');
+    auto find_1_in_t = find(t.begin(), t.end(), '1');
+    if(find_1_in_s==s.end() && find_1_in_t!=t.end()){
+        no;
+        return;
+    }
+    yes;
 }
 
 int32_t main(){
