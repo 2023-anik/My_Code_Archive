@@ -7,12 +7,25 @@ using namespace std;
 void solve(){
     int n;
     cin >> n;
-    int x;
-    int cnt = 0;
+    string s;
+    cin >> s;
     int i;
+    bool ok = 0;
+    int cnt = 0;
+    for (i = 0; i < n-2; i++){
+        if(s.substr(i, 3)=="..."){
+            ok = 1;
+            break;
+        }
+    }
+    if(ok){
+        cout << 2 << endl;
+        return;
+    }
     for (i = 0; i < n; i++){
-        cin >> x;
-        cnt += (x+1)/2;
+        if(s[i]=='.'){
+            cnt++;
+        }
     }
     cout << cnt << endl;
 }
