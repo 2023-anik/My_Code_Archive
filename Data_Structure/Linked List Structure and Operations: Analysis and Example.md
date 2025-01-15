@@ -17,3 +17,4 @@ While ( Temp -> Next != 1020 ){
 Sum -= Temp -> value;
 ```
 *Answer:* `-1`
+
