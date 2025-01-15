@@ -3,7 +3,9 @@ using namespace std;
 #define int long long
 
 void solve(){
-    
+    int n;
+    cin>>n;
+    cout<<(n>=10?"YES":"NO")<<endl;
 }
 
 int32_t main(){
