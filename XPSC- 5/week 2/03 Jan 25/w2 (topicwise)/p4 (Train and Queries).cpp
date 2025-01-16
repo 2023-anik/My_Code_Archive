@@ -15,7 +15,7 @@ typedef pair<int, int> pii;
 void solve(){
     int n, k;
     cin >> n >> k;
-    map<int, multiset<int>> mp;
+    map<int, set<int>> mp;
     int i, x;
     for (i = 1; i<=n; i++){
         cin >> x;
