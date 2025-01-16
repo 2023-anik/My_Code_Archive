@@ -15,22 +15,30 @@ void solve() {
     cin >> s;
     reverse(s.begin(), s.end());
     deque<char> dq;
-    int chUp = 0, chLo = 0;
-    for (char ch : s) {
-        if (ch == 'B')
-            chUp++;
-        else if (ch == 'b')
-            chLo++;
-        else if (chUp && isupper(ch))
-            chUp--;
-        else if (chLo && islower(ch))
-            chLo--;
-        else dq.push_front(ch);
+    int up_cnt=0, lo_cnt=0;
+    for(auto &it:s){
+        if(it=='b'){
+            lo_cnt++;
+            continue;
+        }
+        if(it=='B'){
+            up_cnt++;
+            continue;
+        }
+        if(lo_cnt && islower(it)){
+            lo_cnt--;
+            continue;
+        }
+        if(up_cnt && isupper(it)){
+            up_cnt--;
+            continue;
+        }
+        dq.push_front(it);
     }
-    for (auto &it : dq)
-        cout << it;
-    cout << endl;
-    return;
+    for(auto &it:dq){
+        cout<<it;
+    }
+    cout<<endl;
 }
 
 int32_t main() {
