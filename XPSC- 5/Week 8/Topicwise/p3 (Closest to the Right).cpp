@@ -8,8 +8,7 @@ int lowerBound(const vector<int> &a, int &x){
     int l=0, r=a.size()-1, mid;
     int ans=a.size();
     while(l<=r){
-        // mid=l+(r-l)/2;
-        mid = (l/2)+(r/2);
+        mid=l+(r-l)/2;//=>(l+r)/2
         if(x<=a[mid]){
             ans=mid;
             r=mid-1;
@@ -29,9 +28,9 @@ int main(){
     int x;
     while(k--){
         cin>>x;
-        auto it = lower_bound(a.begin(), a.end(), x);
-        cout<<distance(a.begin(), it)+1<<endl;
-        // cout<<lowerBound(a, x)<<endl;
+        // auto it = lower_bound(a.begin(), a.end(), x);
+        // cout<<distance(a.begin(), it)+1<<endl;
+        cout<<lowerBound(a, x)<<endl;
     }
     return 0;
 }
