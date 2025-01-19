@@ -9,6 +9,6 @@ int main(){
     // it2--;
     // cout<<it2-it1+1<<endl;
     cout<<it2-it1<<endl;//O(1)
-
+    
     cout<<count(a.begin(), a.end(), 6)<<endl;//O(n); useable for both sorted and unsorted
 }
