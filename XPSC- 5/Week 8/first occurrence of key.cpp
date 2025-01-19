@@ -22,4 +22,7 @@ int firstOccurrence(vector<int>&a, int n, int key){
 int main(){
     vector<int>a={2, 4, 6, 6, 7, 8, 8, 8, 10, 12};
     cout<<firstOccurrence(a, 10, 8)<<endl;
+    
+    // auto it = lower_bound(a.begin(), a.end(), 8);
+    // cout<<distance(a.begin(), it)<<endl;//O(1)
 }
