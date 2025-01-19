@@ -5,7 +5,7 @@
 using namespace std;
 #define endl '\n'
 
-int binarySearch(const vector<int> &a, int &x){
+int upperBound(const vector<int> &a, int &x){
     int l=0, r=a.size()-1, mid;
     // bool ok=0;
     int ans=-1;
@@ -32,13 +32,10 @@ int main(){
     int x;
     while(k--){
         cin>>x;
-        auto it = upper_bound(a.begin(), a.end(), x);
-        // if(it==a.begin()){
-        //     cout<<0<<endl;
-        // }
-        // else 
-        cout<<distance(a.begin(), it)<<endl;
-        // cout<<binarySearch(a, x)<<endl;
+        // auto it = upper_bound(a.begin(), a.end(), x);
+        // cout<<distance(a.begin(), it)<<endl;
+
+        cout<<upperBound(a, x)<<endl;
     }
     return 0;
 }
