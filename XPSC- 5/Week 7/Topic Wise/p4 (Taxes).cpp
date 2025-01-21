@@ -27,7 +27,7 @@ void solve(){
         cout << 2 << endl;
         return;
     }
-    // for odd number(n)=x+3;if, x is even and not prime, ans will be 3
+    // for odd number(n)=x+2;if, x is even and not prime, ans will be 3
     //if x is prime then, ans will be 2
     cout << (isPrime(n - 2) ? 2 : 3) << endl;
     return;
