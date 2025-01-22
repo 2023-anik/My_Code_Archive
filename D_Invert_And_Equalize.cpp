@@ -11,12 +11,11 @@ void solve(){
     int cnt=0;
     int i;
     for(i=0; i<n; i++){
-        if(s[i]=='1' && s[i+1]=='0'){
+        if(s[i]!=s[i+1]){
             cnt++;
-            i+=2;
         }
     }
-    cout<<cnt<<endl;
+    cout<<cnt/2<<endl;
 }
 
 int32_t main(){
