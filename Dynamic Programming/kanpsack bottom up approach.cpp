@@ -11,10 +11,16 @@ int knapsack(int n, int w, const vector<int> &wt, const vector<int> &val){
             if(wt[i-1]>j){
                 dp[i][j]=dp[i-1][j];
             }else{
-                dp[i][j]=max(val[i-1]+dp[i-1][w-wt[i-1]], dp[i-1][j]);
+                dp[i][j]=max(val[i-1]+dp[i-1][j-wt[i-1]], dp[i-1][j]);
             }
         }
     }
+    // for(auto &it:dp){
+    //     for(auto &i:it){
+    //         cout<<i<<" ";
+    //     }
+    //     cout<<endl;
+    // }
     return dp[n][w];
 }
 
@@ -23,12 +29,13 @@ int main(){
     int n, w;
     cin>>n>>w;
     vector<int> wt(n), val(n);
-    for(auto &it:wt){
-        cin>>it;
+    int x, y;
+    for(int i=0; i<n; i++){
+        cin>>x>>y;
+        wt[i]=x;
+        val[i]=y;
     }
-    for(auto &it:val){
-        cin>>it;
-    }
-    cout<<knapsack(n-1, w, wt, val)<<endl;
+    cout<<knapsack(n, w, wt, val)<<endl;
+    
     return 0;
 }
