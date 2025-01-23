@@ -1,49 +1,39 @@
 #include<bits/stdc++.h>
 using namespace std;
-#define int long long
-#define all(x) (x).begin(), (x).end()
-#define rall(x) (x).rbegin(), (x).rend()
-#define FAST ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define no cout<<"NO"<<'\n'
-#define yes cout<<"YES"<<'\n'
 #define endl '\n'
-typedef vector<int> vi;
-typedef pair<int, int> pii;
+#define FAST ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 
-int knapsack(int n, int* weight, int* value, int w){
-    if(n==0||w==0)
+int knapsack(int n, int w, const vector<int> &wt, const vector<int> &val){
+    if(n==-1 || w==0){
         return 0;
-    if(weight[n-1]<=w){
-        //duita option
-        //niye dekhbo, na niye dekhbo
-        int op1 = knapsack(n - 1, weight, value, w - weight[n - 1])+ value[n-1];
-        int op2 = knapsack(n - 1, weight, value, w);
-        return max(op1, op2);
     }
-    else{
-        int op2 = knapsack(n - 1, weight, value, w);
-        return op2;
+    // if(wt[n]<=w){
+    //    //option 1: include the item
+    //    int op1=val[n]+knapsack(n-1, w-wt[n], wt, val);
+    //    //option 2: exclude the item
+    //    int op2=knapsack(n-1, w, wt, val);
+    //    return max(op1, op2);
+    // }else{
+    //    //exclude the item
+    //    return knapsack(n-1, w, wt, val);
+    // }
+    if(wt[n]>w){    
+        return knapsack(n-1, w, wt, val);
     }
+    return max(val[n]+knapsack(n-1, w-wt[n], wt, val), knapsack(n-1, w, wt, val));
 }
 
-void solve(){
-    int n;
-    cin >> n;
-    int weight[n], value[n];
-    for (int i = 0; i < n; i++)
-        cin >> weight[i];
-    for (int i = 0; i < n; i++)
-        cin >> value[i];
-    int w;
-    cin >> w;
-    cout << knapsack(n, weight, value, w) << endl;
-    return;
-}
-
-int32_t main(){
+int main(){
     FAST
-    int t=1;
-    // cin>>t;
-    while(t--) solve();
+    int n, w;
+    cin>>n>>w;
+    vector<int> wt(n), val(n);
+    for(auto &it:wt){
+        cin>>it;
+    }
+    for(auto &it:val){
+        cin>>it;
+    }
+    cout<<knapsack(n-1, w, wt, val)<<endl;// n-1 is passed because indexing is 0 based
     return 0;
 }
