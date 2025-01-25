@@ -7,7 +7,7 @@ using namespace std;
 
 class Solution {
 public:
-    //TC-> O(nlog(n))
+    //TC-> O(nlogn + mlogm)
     bool isAnagram1(string s, string t) {
         sort(s.begin(), s.end());
         sort(t.begin(), t.end());
