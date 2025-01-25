@@ -9,9 +9,9 @@ int knapsack(int n, int w, const vector<int> &wt, const vector<int> &val){
     for(i=1; i<=n; i++){
         for(j=1; j<=w; j++){
             if(wt[i-1]>j){
-                dp[i][j]=dp[i-1][j];
+                dp[i][j]=dp[i-1][j];//nibo na
             }else{
-                dp[i][j]=max(val[i-1]+dp[i-1][j-wt[i-1]], dp[i-1][j]);
+                dp[i][j]=max(val[i-1]+dp[i-1][j-wt[i-1]], dp[i-1][j]);//max(nibo, nibo na)
             }
         }
     }
