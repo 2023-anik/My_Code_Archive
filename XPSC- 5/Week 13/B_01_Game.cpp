@@ -8,15 +8,14 @@ using namespace std;
 void solve(){
     string s;
     cin>>s;
-    int cnt=0;
     unordered_map<char, int>mp;
     for(auto &it:s){
         mp[it]++;
     }
-    if(mp['0'>=mp['1']]){
-        mp['1']%2==0?no:yes;
-    }else{
-        mp['0']%2==0?no:yes;
+    if(mp['0'] >= mp['1']){
+        mp['1'] % 2 == 0 ? no : yes;
+    } else {
+        mp['0'] % 2 == 0 ? no : yes;
     }
 }
 
