@@ -18,8 +18,8 @@ void solve(){
         }
     }
     int ansa=0, ansb=0;
-    while(vis[0][ansa])++ansa;
-    while(vis[1][ansb])++ansb;
+    while(vis[0][ansa])++ansa;//track index for vis[0][idx]=0
+    while(vis[1][ansb])++ansb;//track index for vis[1][idx]=0
 
     cout<<ansa+ansb<<endl;
 }
