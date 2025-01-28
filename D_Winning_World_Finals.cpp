@@ -8,8 +8,8 @@ void solve(){
     cin>>n>>m;
     int cnt=1;
     int i, x;
-    for(i=n; i<=298; i++){
-        x=m+(20*cnt)+(i+1);
+    for(i=n; i<299; i++){
+        x = m+(20*cnt)+i+1;
         if(x>1000){
             break;
         }
