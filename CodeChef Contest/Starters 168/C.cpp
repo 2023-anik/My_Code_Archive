@@ -8,21 +8,18 @@ using namespace std;
 
 void solve() {
     int n;
-    cin >> n;
+    cin>>n;
     string a, b;
-    cin >> a >> b;
-
-    int cnt = 0;
-
-    for (int i = 0; i < n; ++i) {
-        if (a[i] != b[i]) {
+    cin>>a>>b;
+    int cnt=0, i;
+    for(i=0; i<n; i++){
+        if(a[i]!=b[i]){
             yes;
             return;
         }
-        if(a[i] == '1')
-            cnt++;
+        cnt += a[i];
     }
-    cnt % 2 == 1 ? yes : no;
+    cnt%2==1?yes:no;
 }
 
 int32_t main(){
