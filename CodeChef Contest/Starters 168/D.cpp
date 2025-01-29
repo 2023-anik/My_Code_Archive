@@ -26,10 +26,12 @@ void solve(){
             inv+=one;
         }
     }
-    if(inv<=x && inv%k==0){
+    //ans will be 1 or 2 for the given string
+    if(inv<=x && inv%k==0){// if we select whole string then if it is divisible by k then the answer is 1
         cout<<1<<endl;
     }else{
         cout<<2<<endl;
+        //when we select all 1s and their inversions similarly for 0s then ans will be 2 
     }
 }
 
