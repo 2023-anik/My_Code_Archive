@@ -5,36 +5,15 @@ using namespace std;
 void solve() {
     int n;
     cin >> n;
-
-    vector<int> p(n);
-    for (auto &it : p) cin >> it;
-
-    vector<int> sorted = p;
-    sort(sorted.begin(), sorted.end());
-
-    unordered_map<int, vector<int>> grps;
-    int i, setBits;
-    for ( i = 0; i < n; ++i) {
-        setBits = __builtin_popcountll(p[i]);
-        grps[setBits].push_back(i);
-    }
-
-    vector<int> org, trg;
-    for (const auto& it : grps) {
-        for (auto &idx : it.second) {
-            org.push_back(p[idx]);
-            trg.push_back(sorted[idx]);
+    int i, x;
+    bool ok = 1;
+    for(i=1; i<=n; i++){
+        cin>>x;
+        if(__builtin_popcount(x)!=__builtin_popcount(i)){
+            ok = 0;
         }
-        sort(org.begin(), org.end());
-        sort(trg.begin(), trg.end());
-        if (org != trg) {
-            cout << "No" <<endl;
-            return;
-        }
-        org.clear();
-        trg.clear();
     }
-    cout << "Yes" << endl;
+    cout<<(ok?"Yes":"No")<<endl;
 }
 
 int32_t main() {
