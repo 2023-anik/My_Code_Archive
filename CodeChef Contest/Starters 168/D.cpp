@@ -1,33 +1,41 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define int long long
-#define FAST ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define no cout<<"NO"<<'\n'
-#define yes cout<<"YES"<<'\n'
 #define endl '\n'
+#define all(x) x.begin(), x.end()
+#define rall(x) x.rbegin(), x.rend()
+#define yes cout<<"YES"<<endl
+#define no cout<<"NO"<<endl
+
 /*
 ░█▀▀░█▀█░█▀▀░░░█▀▀░█▀▄░█▀▄░█▀█░█▀▄░█
 ░█▀▀░█░█░█▀▀░░░█▀▀░█▀▄░█▀▄░█░█░█▀▄░▀
 ░▀▀▀░▀▀▀░▀░░░░░▀▀▀░▀░▀░▀░▀░▀▀▀░▀░▀░▀
 */
-void solve() {
-    int n;
-    cin>>n;
-    string a, b;
-    cin>>a>>b;
-    int cnt=0, i;
-    for(i=0; i<n; i++){
-        if(a[i]!=b[i]){
-            yes;
-            return;
+
+void solve(){
+    int n, x, k;
+    cin>>n>>x>>k;
+    string s;
+    cin>>s;
+    int one=0, inv=0;
+    for(auto &it:s){
+        if(it=='1'){
+            one++;
+        }else{
+            inv+=one;
         }
-        cnt += a[i];
     }
-    cnt%2==1?yes:no;
+    if(inv<=x && inv%k==0){
+        cout<<1<<endl;
+    }else{
+        cout<<2<<endl;
+    }
 }
 
 int32_t main(){
-    FAST
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL), cout.tie(NULL);
     int t=1;
     cin>>t;
     while(t--) solve();
