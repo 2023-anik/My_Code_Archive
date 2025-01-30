@@ -1,1 +1,0 @@
-{"name":"Local: Add 1 or 2 Game","url":"/home/vuban/Documents/My_Code_Archive/Ad-Hoc Problems/Add 1 or 2 Game.cpp","tests":[{"id":1736414975178,"input":"2\n1\n3","output":"ALICE\nBOB"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/vuban/Documents/My_Code_Archive/Ad-Hoc Problems/Add 1 or 2 Game.cpp","group":"local","local":true}
