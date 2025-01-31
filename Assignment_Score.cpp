@@ -29,10 +29,6 @@ void solve() {
     else {
         cout << -1 << endl;
     }
-    for(; ; ;){
-        
-    }
-
 }
 
 int32_t main(){
