@@ -16,13 +16,13 @@ void solve(){
         if(it=='a'){
             break;
         }
-        cnts++;
+        cnts++;//The number of leading 'b' of string s
     }
     for(auto &it:t){
         if(it=='a'){
             break;
         }
-        cntt++;
+        cntt++;//The number of leading 'b' of string t
     }
     if(cnts!=cntt){
         cout<<"NO"<<endl;
