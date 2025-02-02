@@ -6,7 +6,7 @@ void solve(){
     int n, k;
     cin>>n>>k;
     int min = 10*n;
-    int max = 12*n;
+    int max = 12*n; 
     cout<<(k>=min && k<=max?"YES":"NO")<<endl;
 }
 
