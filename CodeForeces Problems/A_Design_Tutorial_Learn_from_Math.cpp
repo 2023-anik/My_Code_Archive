@@ -9,7 +9,13 @@ using ll = long long;
 #define input(v) for(auto &i : v) cin >> i
 
 void solve(){
-    
+    ll n;
+    cin>>n;
+    if(n%2==0){
+        cout<<n-4<<" "<<4<<endl;
+    }else{
+        cout<<n-9<<" "<<9<<endl;
+    }
 }
 
 int main(){
@@ -18,7 +24,7 @@ int main(){
     cout.tie(0);
     int t;
     t = 1;
-    // cin>>t;
+    // cin>>n;
     while(t--){
         solve();
     }

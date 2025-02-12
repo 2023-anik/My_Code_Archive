@@ -9,7 +9,9 @@ using ll = long long;
 #define input(v) for(auto &i : v) cin >> i
 
 void solve(){
-    
+    ll n;
+    cin>>n;
+    cout<<n/2<<endl;
 }
 
 int main(){
@@ -18,7 +20,7 @@ int main(){
     cout.tie(0);
     int t;
     t = 1;
-    // cin>>t;
+    cin>>t;
     while(t--){
         solve();
     }

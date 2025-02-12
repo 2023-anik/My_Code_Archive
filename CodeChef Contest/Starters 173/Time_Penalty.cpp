@@ -2,14 +2,11 @@
 using namespace std;
 using ll = long long;
 #define endl '\n'
-#define yes cout << "YES" << endl
-#define no cout << "NO" << endl
-#define all(v) v.begin(), v.end()
-#define allr(v) v.rbegin(), v.rend()
-#define input(v) for(auto &i : v) cin >> i
 
 void solve(){
-    
+    ll x, y;
+    cin>>x>>y;
+    cout<<x + (y*10)<<endl;
 }
 
 int main(){
