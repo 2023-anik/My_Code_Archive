@@ -10,6 +10,9 @@ int gcd(int a, int b){
 int main(){
     int a, b;
     cin>>a>>b;
-    cout<<gcd(a, b)<<endl;
-    cout<<__gcd(a, b)<<endl;//using builtin function
+    cout<<"gcd: "<<gcd(a, b)<<endl;
+    cout<<"gcd: "<<__gcd(a, b)<<endl;//using builtin function
+    cout<<"lcm: "<<(a*b)/__gcd(a, b)<<endl;
 }
+
+//gcd(a, b) * lcm(a, b) = a*b
