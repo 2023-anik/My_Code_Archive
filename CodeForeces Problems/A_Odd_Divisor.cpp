@@ -1,18 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 using ll = long long;
+
 #define endl '\n'
-#define yes cout << "First" << endl
-#define no cout << "Second" << endl
+#define yes cout << "YES" << endl
+#define no cout << "NO" << endl
 
 void solve(){
     ll n;
     cin>>n;
-    if(n%3==1 or n%3==2){
-        yes;
-    }else{
-        no;
-    }
+    if(n&(n-1)) yes;
+    else no;
 }
 
 int main(){
