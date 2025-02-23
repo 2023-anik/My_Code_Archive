@@ -18,7 +18,7 @@ void solve(){
     cin>>n>>m;
     vector<ll>a(n), b(m);
     input(a);
-    input(b);11111111
+    input(b);
     sort(all(b));
     ll previousElement = min(b[0]-a[0], a[0]);
     ITE(i, 1, n){
